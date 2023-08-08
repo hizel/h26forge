@@ -650,7 +650,7 @@ pub fn save_mp4_file(
     let mut mp4muxer = Mp4Muxer::new(File::create(mp4_filename).unwrap());
     let enable_fragmentation = is_mp4_fragment;
     let is_hevc = is_hevc;
-    mp4muxer.init_video(width, height, is_hevc, enable_fragmentation);
+    mp4muxer.init_video(width, height, is_hevc, enable_fragmentation, "title");
     mp4muxer.write_video(encoded_str);
     mp4muxer.close();
 }

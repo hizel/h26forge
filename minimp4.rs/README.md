@@ -32,11 +32,3 @@ A [minimp4](https://github.com/lieff/minimp4) Rust binding.
 # Contributing
 
 Pull request :)
-
-# WRV: Changes made to MiniMP4
-
-- Skip parameter set and slice header rewriting to incremental values. Instead, keep the original SPS_ID and PPS_IDs. This impacts playback on some players that expect incremental IDs, per the avcC standard.
-- For H.265 muxing, only the first SPS is added to the hvcC atom -- subsequent ones are part of the mdat atom.
-- Do not skip AUD types.
-- The `first_mb_in_slice` syntax element is ignored.
-- Skip an IDR slice requirement.
