@@ -5,7 +5,7 @@
 #endif
 #include "minimp4.h"
 
-static size_t get_nal_size(const uint8_t *buf, size_t size)
+static size_t get_nal_size(uint8_t *buf, size_t size)
 {
     size_t pos = 3;
     while ((size - pos) > 3)
